@@ -1,6 +1,6 @@
 'use strict';
 
-var EventMediator = window.angular.module('SpagEventMediator', []);
+var EventMediator = window.angular.module('GongEventMediator', []);
 
 EventMediator.factory('eventMediator', ['$rootScope', function($rootScope) {
 	var subscribers = {};

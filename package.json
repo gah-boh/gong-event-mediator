@@ -1,0 +1,33 @@
+{
+  "name": "gong-event-mediator",
+  "version": "1.0.0",
+  "description": "Event Mediator for AngularJS 1.x",
+  "main": "event-mediator.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gah-boh/gong-event-mediator.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs"
+  ],
+  "author": "Gabo Obregon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gah-boh/gong-event-mediator/issues"
+  },
+  "homepage": "https://github.com/gah-boh/gong-event-mediator#readme",
+  "devDependencies": {
+    "angular": "^1.4.8",
+    "angular-mocks": "^1.4.8",
+    "jasmine-core": "^2.4.0",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "webpack": "^1.12.9"
+  }
+}

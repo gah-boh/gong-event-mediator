@@ -1,8 +1,11 @@
+var angular = require('angular');
+var angularMocks = require('angular-mocks')
+var eventMediator = require('./event-mediator');
+
 describe("Event Mediator", function() {
 	'use strict';
 
 	var mocks = window.angular.mock;
-	var eventMediator = require('./event-mediator');
 
 	var $rootScope;
 	var $scope;
@@ -10,7 +13,7 @@ describe("Event Mediator", function() {
 	var subscriptionSpy;
 	var eventName;
 
-	beforeEach(mocks.module(eventMediator.name));
+	beforeEach(mocks.module(eventMediator));
 
 	beforeEach(mocks.inject(function(_$rootScope_, $controller, _eventMediator_) {
 		$rootScope = _$rootScope_;
