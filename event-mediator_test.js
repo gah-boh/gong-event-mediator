@@ -44,6 +44,12 @@ describe("Event Mediator", function() {
 		expect(subscriptionSpy).toHaveBeenCalledWith(jasmine.any(Object), "An Argument");
 	});
 
+    it("should call the event with multiple arguments if given when the event is emitted", function() {
+        sut.subscribe($scope, eventName, subscriptionSpy);
+        sut.emit(eventName, 'argument one', 'argument two');
+        expect(subscriptionSpy).toHaveBeenCalledWith(jasmine.any(Object), 'argument one', 'argument two');
+    });
+
 	it("should deregister the event from the subscribers object on deregister", function() {
 		sut.subscribe($scope, eventName, subscriptionSpy);
 		sut.unsubscribe($scope, eventName);

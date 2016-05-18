@@ -13,8 +13,8 @@ EventMediator.factory('eventMediator', ['$rootScope', function($rootScope) {
 		var deregistration = register(eventName, eventFunction);
 		var eventInfo = {
 			deregistration: deregistration,
-	eventName: eventName,
-	isLive: true
+            eventName: eventName,
+            isLive: true
 		};
 		subscribers[scope.$id].push(eventInfo);
 	};
@@ -54,8 +54,8 @@ EventMediator.factory('eventMediator', ['$rootScope', function($rootScope) {
 				addSubscription(scope, eventName, eventFunction);
 			},
 
-			emit: function(eventName, args) {
-				$rootScope.$emit(eventName, args);
+			emit: function() {
+				$rootScope.$emit.apply($rootScope, arguments);
 			},
 
 			unsubscribe: function(scope, eventName) {
